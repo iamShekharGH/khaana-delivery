@@ -1,0 +1,21 @@
+{
+    "SendPhoneNumberRequest":
+    {
+    "mobileNo" : "9898989898"
+    },
+    "SendPhoneNumberResponse":
+    {
+        "meta" :{
+            "message" : "AOK Successfull!!",
+            "code" : 200
+        }
+    },
+    "dashboardInformation":
+    {
+
+    }
+
+
+    
+
+}
