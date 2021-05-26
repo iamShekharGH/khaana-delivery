@@ -26,21 +26,29 @@ func main() {
 
 	fmt.Println("Hi there.")
 	log.Println("Listening on \t:", port)
-	log.Fatal(http.ListenAndServe(":"+port, nil))
 
 	initialInit()
+
+	log.Fatal(http.ListenAndServe(":"+port, nil))
+
 }
 
 func initialInit() {
 	http.HandleFunc("/", indexFunc)
-	http.HandleFunc("/test", test)
+	http.HandleFunc("/test/", test)
 }
 
 func indexFunc(w http.ResponseWriter, r *http.Request) {
 	s := `
+		<html>
 		<title>THis is ShekharGH</title>
+		
+		<body>
 		<h1>Init is loading</h1>
+		</body>
+		</html>
 	`
+
 	io.WriteString(w, s)
 }
 
